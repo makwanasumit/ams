@@ -80,7 +80,7 @@ const Login = ({handleLogin}) => {
                 </div>
                 <div className="w-full px-9 ">
                   <h3 className='text-[#434347] text-sm'>
-                    Don't have an account? <a href="#" className="text-[#8164f4]">Create account</a>
+                    Don&apos;t have an account? <a href="#" className="text-[#8164f4]">Create account</a>
                   </h3>
                   <h3 className='text-[#434347] text-sm'>
                     Forgot your password? <a href="#" className="text-[#8164f4]">Recover password</a>
