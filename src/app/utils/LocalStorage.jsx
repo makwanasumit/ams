@@ -298,5 +298,8 @@ export const getLocalStorage = () => {
 
 // Only call setLocalStorage on the client side
 if (typeof window !== "undefined") {
-  setLocalStorage();
+  const hasData = localStorage.getItem("employees") && localStorage.getItem("admin");
+  if (!hasData) {
+    setLocalStorage();
+  }
 }
