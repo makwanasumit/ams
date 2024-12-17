@@ -266,8 +266,13 @@ const admin = [
     localStorage.setItem('employees', JSON.stringify(employees))
     localStorage.setItem('admin', JSON.stringify(admin))
   }
-  setLocalStorage()
+
+
+  if(!localStorage.getItem('employees') || !localStorage.getItem('admin')){
+    setLocalStorage()
+  }
 // localStorage.clear()
+
 
   export const getLocalStorage = () => {
     const employees = JSON.parse(localStorage.getItem('employees'))
