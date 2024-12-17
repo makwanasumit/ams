@@ -1,3 +1,4 @@
+"use client"
 const employees = [
     {
       id: 1,
@@ -262,20 +263,40 @@ const admin = [
 
 
 
-  export const setLocalStorage = () => {
-    localStorage.setItem('employees', JSON.stringify(employees))
-    localStorage.setItem('admin', JSON.stringify(admin))
-  }
+//   export const setLocalStorage = () => {
+//     localStorage.setItem('employees', JSON.stringify(employees))
+//     localStorage.setItem('admin', JSON.stringify(admin))
+    
+//   }
 
 
-  // setLocalStorage()
-// localStorage.clear()
+//   // setLocalStorage()
+// // localStorage.clear()
 
 
-  export const getLocalStorage = () => {
-    const employees = JSON.parse(localStorage.getItem('employees'))
-    const admin = JSON.parse(localStorage.getItem('admin'))
-    return {employees, admin}
-  }
+//   export const getLocalStorage = () => {
+//     const employees = JSON.parse(localStorage.getItem('employees'))
+//     const admin = JSON.parse(localStorage.getItem('admin'))
+//     return {employees, admin}
+//   }
   
-  
+export const setLocalStorage = () => {
+  if (typeof window !== "undefined") {
+    localStorage.setItem("employees", JSON.stringify(employees));
+    localStorage.setItem("admin", JSON.stringify(admin));
+  }
+};
+
+export const getLocalStorage = () => {
+  if (typeof window !== "undefined") {
+    const employees = JSON.parse(localStorage.getItem("employees")) || [];
+    const admin = JSON.parse(localStorage.getItem("admin")) || [];
+    return { employees, admin };
+  }
+  return { employees: [], admin: [] }; // Return empty if on the server
+};
+
+// Only call setLocalStorage on the client side
+if (typeof window !== "undefined") {
+  setLocalStorage();
+}
