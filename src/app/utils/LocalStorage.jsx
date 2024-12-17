@@ -268,9 +268,7 @@ const admin = [
   }
 
 
-  if(!localStorage.getItem('employees') || !localStorage.getItem('admin')){
-    setLocalStorage()
-  }
+  // setLocalStorage()
 // localStorage.clear()
 
 
