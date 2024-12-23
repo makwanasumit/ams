@@ -1,3 +1,14 @@
+Visit this link for preview : https://ams-wheat.vercel.app/
+admin email is sumit@gmail.com and pass is 123
+employee1 email is emoloyee1@example.com and pass is 123
+                   emoloyee2@example.com and pass is 123
+                   emoloyee3@example.com and pass is 123
+                   emoloyee4@example.com and pass is 123
+                   emoloyee5@example.com and pass is 123
+
+
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
